@@ -1,5 +1,27 @@
 # Day 11 — Controlled Agent Security (2026)
 
+## Thông tin học viên
+
+| | |
+|---|---|
+| **Họ tên** | Nguyễn Minh Triết |
+| **MSSV** | 2A202603995 |
+| **Lớp** | K5-L3B |
+
+**Kết quả:** Blue chặn 8/9 attack, 0/6 câu safe bị chặn nhầm, rate limit 10 qua / 5 chặn · Red leak 5/5 · Red Advance leak 0/5
+
+**Cách chạy (Windows PowerShell):**
+
+```powershell
+python -m venv .venv; .\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt   # copy .env.example → .env rồi điền key
+python src/main.py --part 2       # CP2 guardrails
+python src/main.py --part 3       # CP3 → outputs/results.json
+python src/main.py --part 4       # CP4 → outputs/attack_results.json
+```
+
+---
+
 > 👤 **Hình thức:** bài tập **cá nhân** (1 người / 1 MSSV).  
 > 🎯 **Mục tiêu:** đóng vai **Blue Team** để học cách xây Guardrails phòng thủ, rồi đóng vai **Red Team** để tấn công agent **Red** hoặc **Red Advance**.  
 > ✅ Làm theo **Checkpoint 1 → 5** trong [`CHECKPOINTS.md`](CHECKPOINTS.md) · nộp theo [`SUBMISSION.md`](SUBMISSION.md).
